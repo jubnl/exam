@@ -1,0 +1,12 @@
+site_name: TK Debug Window
+
+theme:
+  name: "material"
+
+plugins:
+  - mkdocstrings
+
+nav:
+  - Home: index.md
+  - "Debug Window Source": debug_window_source.md
+  - "Log sender Source": log_sender_source.md
