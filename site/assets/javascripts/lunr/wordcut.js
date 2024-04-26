@@ -4528,7 +4528,7 @@ process.umask = function() { return 0; };
 
 (function() {
 
-  // Baseline setup
+  // Baseline setup.sh
   // --------------
 
   // Establish the root object, `window` in the browser, or `exports` on the server.
@@ -6643,7 +6643,7 @@ exports.log = function() {
  * The Function.prototype.inherits from lang.js rewritten as a standalone
  * function (not on Function.prototype). NOTE: If this file is to be loaded
  * during bootstrapping this function needs to be rewritten using some native
- * functions as prototype setup using normal JavaScript does not work as
+ * functions as prototype setup.sh using normal JavaScript does not work as
  * expected during bootstrapping (see mirror.js in r114903).
  *
  * @param {function} ctor Constructor function which needs to inherit the
