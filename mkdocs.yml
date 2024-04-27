@@ -1,10 +1,19 @@
 site_name: TK Debug Window
 
 theme:
-  name: "material"
+  name: material
+  locale: en
+  highlightjs: true
+
+repo_url: https://github.com/jubnl/exam
+repo_name: Exam Module 155
+edit_uri: "blob/main/docs/"
+
+site_author: "Julien Gunther"
 
 plugins:
   - mkdocstrings
+  - search
 
 nav:
   - Home: index.md
