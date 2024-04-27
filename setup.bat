@@ -19,3 +19,10 @@ if errorlevel 1 (
     echo Failed to install dependencies.
     exit /b 1
 )
+
+REM build the docs
+mkdocs build
+if errorlevel 1 (
+    echo Failed to build the documentation.
+    exit /b 1
+)

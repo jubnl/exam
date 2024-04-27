@@ -84,10 +84,11 @@ threading.Thread(target=client_handler, args=(client, console)).start()
 To test the debug window functionality, follow these steps in a terminal:
 
 1. **Execute main.py**:
-   - Run the command `python(3) main.py`. This script initializes the debugging process.
+    - Run the command `python(3) main.py`. This script initializes the debugging process.
 
 2. **Execute send_logs.py**:
-   - After `main.py` is running, execute the command `python(3) send_logs.py`. This script sends logs to the debug window.
+    - After `main.py` is running, execute the command `python(3) send_logs.py`. This script sends logs to the debug
+      window.
 
 Note: Activating the virtual environment is not necessary for these scripts as they only utilize pure Python code.
 

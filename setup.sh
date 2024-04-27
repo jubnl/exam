@@ -16,3 +16,9 @@ if ! pip install -r requirements.txt; then
     echo "Failed to install dependencies."
     exit 1
 fi
+
+# build the docs
+if ! mkdocs build; then
+  echo "Failed to build the docs"
+  exit 1
+fi
