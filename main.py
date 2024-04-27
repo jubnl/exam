@@ -215,12 +215,12 @@ class OptionsFrame(tk.Frame):
 class GlobalSearchFrame(tk.Frame):
     """Frame for global search options."""
 
-    def __init__(self, parent, root):
+    def __init__(self, parent, tk_root):
         """Initialize the global search frame."""
         super().__init__(parent)
 
         self.after_id = None
-        self.root = root
+        self.tk_root = tk_root
         self.console = None
 
         # Global search entry
@@ -262,8 +262,8 @@ class GlobalSearchFrame(tk.Frame):
     def on_entry_changed(self, *args):
         """Handle the entry changed event."""
         if self.after_id:
-            self.root.after_cancel(self.after_id)
-        self.after_id = self.root.after(300, self.apply_search_entry_var)
+            self.tk_root.after_cancel(self.after_id)
+        self.after_id = self.tk_root.after(300, self.apply_search_entry_var)
 
     def apply_search_entry_var(self):
         self.console.set_filter(global_search_str=self.search_entry_var.get())
@@ -506,9 +506,9 @@ class Console(tk.Frame):
 class SpecificSearchFrame(tk.Frame):
     """Frame for specific search options."""
 
-    def __init__(self, parent, root):
+    def __init__(self, parent, tk_root):
         super().__init__(parent)
-        self.root = root
+        self.tk_root = tk_root
         self.after_id = None
         self.console = None
 
@@ -526,7 +526,7 @@ class SpecificSearchFrame(tk.Frame):
 
         # Log level dropdown
         self.log_level_dropdown_var = tk.StringVar()
-        self.log_level_dropdown_var.set("TRACE")
+        self.log_level_dropdown_var.set("INFO ")
         self.log_level_dropdown = tk.OptionMenu(
             self,
             self.log_level_dropdown_var,
@@ -572,8 +572,8 @@ class SpecificSearchFrame(tk.Frame):
     def on_entry_changed(self, *args):
         """Handle the entry changed event."""
         if self.after_id:
-            self.root.after_cancel(self.after_id)
-        self.after_id = self.root.after(250, self.apply_logger_entry_var)
+            self.tk_root.after_cancel(self.after_id)
+        self.after_id = self.tk_root.after(250, self.apply_logger_entry_var)
 
     def apply_logger_entry_var(self):
         """Apply the logger entry variable."""
