@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Create a virtual environment and activate it
-if ! python3 -m venv ./venv; then
+if ! python3 -m venv ./.venv; then
     echo "Failed to create virtual environment."
     exit 1
 fi
 
-if ! source ./venv/bin/activate; then
+if ! source ./.venv/bin/activate; then
     echo "Failed to activate virtual environment."
     exit 1
 fi

@@ -1,13 +1,13 @@
 @echo off
 
 REM Create a virtual environment and activate it
-python -m venv venv
+python -m venv .venv
 if errorlevel 1 (
     echo Failed to create virtual environment.
     exit /b 1
 )
 
-CALL venv\Scripts\activate.bat
+CALL .venv\Scripts\activate.bat
 if errorlevel 1 (
     echo Failed to activate virtual environment.
     exit /b 1
