@@ -7,7 +7,7 @@ Follow these steps to set up the project documentation:
    - For Unix-based systems (Linux, macOS): Execute `setup.sh` in the terminal.
 
 2. **Activate the Python Virtual Environment**:
-   - Run the command `source venv/bin/activate` (Unix) or `venv\Scripts\activate` (Windows) to activate the virtual environment.
+   - Run the command `source .venv/bin/activate` (Unix) or `.venv\Scripts\activate` (Windows) to activate the virtual environment.
 
 3. **Launch MkDocs Server**:
    - Execute the command `mkdocs serve` to start the MkDocs web server. This command serves the project documentation locally.

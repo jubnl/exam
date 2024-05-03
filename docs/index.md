@@ -39,15 +39,15 @@ purpose, and the benefits it offers in this specific use case:
 
 ## Utilization of Threading:
 
-Threading is employed in the function `listen_for_clients`, which listens for incoming connections from clients. Each
-client connection is handled by spawning a new thread that executes the `client_handler` function. This function is
+Threading is employed in the function [`listen_for_clients`](debug_window_source.md#main.listen_for_clients), which listens for incoming connections from clients. Each
+client connection is handled by spawning a new thread that executes the [`client_handler`](debug_window_source.md#main.client_handler) function. This function is
 responsible for processing incoming log data from each connected client.
 
 ```py
 threading.Thread(target=listen_for_clients, daemon=True, args=(root.get_console(),)).start()
 ```
 
-Here, a thread is created and started to run the `listen_for_clients` function. This function continuously listens for
+Here, a thread is created and started to run the [`listen_for_clients`](debug_window_source.md#main.listen_for_clients) function. This function continuously listens for
 new client connections and, upon accepting a connection, creates another thread:
 
 ```py
